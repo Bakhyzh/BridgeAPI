@@ -24,14 +24,12 @@ public class AuthController {
         this.authService = authService;
     }
 
-    // Login
     @PostMapping("/login")
     public ResponseEntity<AuthResponseDto> authLogin(@RequestBody AuthLoginDto dto) {
         AuthResponseDto response = authService.login(dto);
         return ResponseEntity.status(HttpStatus.OK).body(response);
     }
 
-    // Create owner
     @PostMapping("/register")
     public ResponseEntity<AuthResponseDto> createOwner(@Valid @RequestBody OwnerCreateDTO dto) {
         AuthResponseDto response = authService.register(dto);
