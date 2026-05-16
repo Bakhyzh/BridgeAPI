@@ -20,7 +20,6 @@ public class PetController {
     @Autowired
     private PetService petService;
 
-    // Upload a picture for a pet
     @PostMapping("/{petId}/picture")
     public ResponseEntity<String> uploadPicture(@PathVariable Long petId, @RequestParam("file") MultipartFile file) {
         try {
