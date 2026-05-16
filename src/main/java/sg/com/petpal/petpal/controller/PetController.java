@@ -39,14 +39,12 @@ public class PetController {
         return ResponseEntity.ok(pets);
     }
 
-    // Get a pet by id
     @GetMapping("/{id}")
     public ResponseEntity<Pet> getPetById(@PathVariable Long id) {
         Optional<Pet> pet = petService.findById(id);
         return pet.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    // Create a new pet
     @PostMapping
     public ResponseEntity<Pet> createPet(@RequestBody Pet pet) {
         Pet createdPet = petService.save(pet);
