@@ -33,7 +33,6 @@ public class PetController {
         }
     }
 
-    // Get all pets
     @GetMapping("")
     public ResponseEntity<List<Pet>> getAllPets() {
         List<Pet> pets = petService.findAll();
