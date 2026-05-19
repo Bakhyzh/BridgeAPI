@@ -4,7 +4,7 @@ BridgeAPI is a backend service built with Java and Spring Boot that aggregates d
 
 The project focuses on reliability, scalability, and clean architecture for handling unstable third-party services in real-world environments.
 
----
+----
 
 ## Features
 
@@ -18,7 +18,7 @@ The project focuses on reliability, scalability, and clean architecture for hand
 - Docker support
 - PostgreSQL integration
 
----
+----
 
 ## Tech Stack
 
@@ -30,7 +30,7 @@ The project focuses on reliability, scalability, and clean architecture for hand
 - Docker
 - Maven
 
----
+----
 
 ## Architecture
 
