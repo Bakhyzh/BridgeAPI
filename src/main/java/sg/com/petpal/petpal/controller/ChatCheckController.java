@@ -7,7 +7,7 @@ import sg.com.petpal.petpal.model.ChatMessage;
 
 import java.util.List;
 import java.util.UUID;
-
+///Check from Bakhyt
 public class ChatCheckController {
     @RequestMapping
     @GetMapping({"", "/"})
