@@ -31,6 +31,11 @@ public class ChatCheckController {
     public ResponseEntity<List<ChatMessage>> CreateChatCheckIdMessages(@RequestParam(required = false) UUID chatRoomId) {
         return ResponseEntity.ok(chatMessageService.findChatRoomAllMessages(chatRoomId).getBody());
     }
+    @RequestMapping
+    @PostMapping({"", "/{id}"})
+    public ResponseEntity<List<ChatMessage>> CreateChatIdMessages(@RequestParam(required = false) UUID chatRoomId) {
+        return ResponseEntity.ok(chatMessageService.findChatRoomAllMessages(chatRoomId).getBody());
+    }
     @DeleteMapping("/{id}")
     public ResponseEntity<HttpStatus> deleteChatCheckById(@PathVariable UUID id) {
 
