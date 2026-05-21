@@ -10,9 +10,10 @@ import java.util.List;
 import java.util.UUID;
 ///Check from Bakhyt
 public class ChatCheckController {
-    @Autowired
+
     private ChatMessageController chatMessageService;
-    public ChatCheckController(ChatMessageController chatMessageService){
+    private ChatRoomController chatRoomService;
+    public ChatCheckController(ChatMessageController chatMessageService,ChatRoomController chatRoomService){
         this.chatMessageService=chatMessageService;
     }
     @RequestMapping
@@ -32,6 +33,7 @@ public class ChatCheckController {
     }
     @DeleteMapping("/{id}")
     public ResponseEntity<HttpStatus> deleteChatCheckById(@PathVariable UUID id) {
+
         chatRoomService.deleteChatRoomById(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
