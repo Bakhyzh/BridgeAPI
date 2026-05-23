@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import sg.com.petpal.petpal.dto.ChatRoomOwnersDto;
+import sg.com.petpal.petpal.dto.ChatCheckOwnersDto;
 import sg.com.petpal.petpal.model.ChatRoom;
 import sg.com.petpal.petpal.service.ChatRoomService;
 
@@ -39,12 +39,12 @@ public class ChatRoomController {
     }
 
     @PostMapping({"", "/"})
-    public ResponseEntity<ChatRoom> createChatRoom(@RequestBody ChatRoomOwnersDto chatRoomOwnersDto) {
+    public ResponseEntity<ChatRoom> createChatRoom(@RequestBody ChatCheckOwnersDto chatRoomOwnersDto) {
         return ResponseEntity.status(HttpStatus.CREATED).body(chatRoomService.createChatRoom(chatRoomOwnersDto));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<ChatRoom> updateChatRoomById(@PathVariable UUID id, @RequestBody ChatRoomOwnersDto chatRoomOwnersDto) {
+    public ResponseEntity<ChatRoom> updateChatRoomById(@PathVariable UUID id, @RequestBody ChatCheckOwnersDto chatRoomOwnersDto) {
         return ResponseEntity.ok(chatRoomService.updateChatRoomById(id, chatRoomOwnersDto));
     }
 

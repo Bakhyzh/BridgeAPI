@@ -6,7 +6,7 @@ import java.util.UUID;
 
 import org.springframework.stereotype.Service;
 
-import sg.com.petpal.petpal.dto.ChatRoomOwnersDto;
+import sg.com.petpal.petpal.dto.ChatCheckOwnersDto;
 import sg.com.petpal.petpal.exception.ChatRoomNotFoundException;
 import sg.com.petpal.petpal.exception.NoChatRoomOwnerException;
 import sg.com.petpal.petpal.exception.OwnerNotFoundException;
@@ -38,7 +38,7 @@ public class ChatRoomServiceImpl implements ChatRoomService {
     }
 
     @Override
-    public ChatRoom createChatRoom(ChatRoomOwnersDto chatRoomOwnersDto) {
+    public ChatRoom createChatRoom(ChatCheckOwnersDto chatRoomOwnersDto) {
         List<Long> chatRoomOwnerIds = chatRoomOwnersDto.getOwnerIds();
         if (chatRoomOwnerIds.size() > 0) {
             List<Owner> chatRoomOwners = findChatRoomOwnersByIds(chatRoomOwnerIds);
@@ -50,9 +50,9 @@ public class ChatRoomServiceImpl implements ChatRoomService {
     }
 
     @Override
-    public ChatRoom updateChatRoomById(UUID id, ChatRoomOwnersDto chatRoomOwnersDto) {
+    public ChatRoom updateChatRoomById(UUID id, ChatCheckOwnersDto chatCheckOwnersDto) {
         ChatRoom chatRoomToUpdate = chatRoomRepository.findById(id).orElseThrow(() -> new ChatRoomNotFoundException(id));
-        List<Long> chatRoomOwnerIds = chatRoomOwnersDto.getOwnerIds();
+        List<Long> chatRoomOwnerIds = chatCheckOwnersDto.getOwnerIds();
         if (chatRoomOwnerIds.size() > 0) {
             chatRoomToUpdate.setOwners(findChatRoomOwnersByIds(chatRoomOwnerIds));
             return chatRoomRepository.save(chatRoomToUpdate);

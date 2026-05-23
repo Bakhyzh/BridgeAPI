@@ -4,21 +4,18 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.when;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import sg.com.petpal.petpal.dto.ChatRoomOwnersDto;
+import sg.com.petpal.petpal.dto.ChatCheckOwnersDto;
 import sg.com.petpal.petpal.exception.ChatRoomNotFoundException;
-import sg.com.petpal.petpal.model.ChatMessage;
 import sg.com.petpal.petpal.model.ChatRoom;
 import sg.com.petpal.petpal.model.Owner;
 import sg.com.petpal.petpal.model.OwnerAuth;
@@ -139,11 +136,11 @@ public class ChatRoomServiceImplTest {
         .build();
     }
 
-    private ChatRoomOwnersDto constructChatRoomOwnersDto() {
+    private ChatCheckOwnersDto constructChatRoomOwnersDto() {
         List<Long> ownerIds = new ArrayList<>();
         ownerIds.add(1L);
         ownerIds.add(2L);
-        return new ChatRoomOwnersDto(ownerIds);
+        return new ChatCheckOwnersDto(ownerIds);
     }
 
     // private List<ChatMessage> constructChatMessages(int quantity, ChatRoom chatRoom, Owner owner) {
