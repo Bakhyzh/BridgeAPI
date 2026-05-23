@@ -1,4 +1,11 @@
 package sg.com.petpal.petpal.repository;
 
-public class ChatCheckRepository {
+import java.util.UUID;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import sg.com.petpal.petpal.model.ChatRoom;
+
+public interface ChatCheckRepository extends JpaRepository<ChatRoom, UUID> {
+
 }
