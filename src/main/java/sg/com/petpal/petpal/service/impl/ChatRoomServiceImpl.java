@@ -6,7 +6,6 @@ import java.util.UUID;
 
 import org.springframework.stereotype.Service;
 
-import sg.com.petpal.petpal.dto.ChatCheckOwnersDto;
 import sg.com.petpal.petpal.exception.ChatRoomNotFoundException;
 import sg.com.petpal.petpal.exception.NoChatRoomOwnerException;
 import sg.com.petpal.petpal.exception.OwnerNotFoundException;

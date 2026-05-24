@@ -14,7 +14,6 @@ import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import sg.com.petpal.petpal.dto.ChatCheckOwnersDto;
 import sg.com.petpal.petpal.exception.ChatRoomNotFoundException;
 import sg.com.petpal.petpal.model.ChatRoom;
 import sg.com.petpal.petpal.model.Owner;
