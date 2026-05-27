@@ -43,4 +43,4 @@ Service Layer
    ↓
 External API Clients
    ↓
-Multiple Third-Party APIs
+Multiple Third-Party APIs.
