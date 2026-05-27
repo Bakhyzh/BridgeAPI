@@ -12,6 +12,7 @@ import lombok.Setter;
 public class ChatMessageOwnerDto {
 
     private Long ownerId;
+
     private String message;
     
 }
