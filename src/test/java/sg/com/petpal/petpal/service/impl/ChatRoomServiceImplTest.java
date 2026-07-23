@@ -76,19 +76,7 @@ public class ChatRoomServiceImplTest {
             () -> chatRoomServiceImpl.findChatRoomById(chatRoom.getId()));
     }
 
-    // @Test
-    // public void createChatRoom_success() {
-    //     List<Owner> owners = constructOwners();
-    //     ChatRoom chatRoom = constructChatRoom(owners);
-
-    //     when(ownerRepository.findById(1L)).thenReturn(Optional.of(owners.get(0)));
-    //     when(ownerRepository.findById(2L)).thenReturn(Optional.of(owners.get(1)));
-    //     when(chatRoomRepository.findById(chatRoom.getId())).thenReturn(Optional.of(chatRoom));
-    //     ChatRoom foundChatRoom = chatRoomServiceImpl.createChatRoom(constructChatRoomOwnersDto());
-
-    //     assertEquals(chatRoom, foundChatRoom);
-    // }
-
+ 
     private List<Owner> constructOwners() {
         List<Owner> owners = new ArrayList<>();
                 Owner owner = Owner.builder()
