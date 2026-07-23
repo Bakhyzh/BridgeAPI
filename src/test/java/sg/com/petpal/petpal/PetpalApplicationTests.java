@@ -8,6 +8,7 @@ class PetpalApplicationTests {
 
 	@Test
 	void contextLoads() {
+		
 	}
 
 }
