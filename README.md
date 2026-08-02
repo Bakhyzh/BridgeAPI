@@ -1,4 +1,4 @@
-# BridgeAPI — External API Aggregation Service 
+# BridgeAPI — External API Aggregation Service.
 
 BridgeAPI is a backend service built with Java and Spring Boot that aggregates data from multiple external APIs into a single unified response.
 
